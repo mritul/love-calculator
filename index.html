@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7779a82539.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">
+        <i class="fa-solid fa-heart"></i>Love Calculator<i
+          class="fa-solid fa-heart"
+        ></i>
+      </h1>
+      <p class="sub-title">
+        Enter your name and the name of your partner/lover/crush to find Love
+        compatibility & chances of successful love relationship.
+      </p>
+    </header>
+    <main>
+      <section class="form-container">
+        <h1 class="form-title">Enter the names to calculate love for</h1>
+        <form>
+          <div class="form-group">
+            <label for="floatingInput">Person 1</label>
+            <input type="text" id="fname" placeholder="e.g Alice" required />
+          </div>
+          <div class="form-group">
+            <label for="floatingPassword">Person 2</label>
+            <input type="text" id="sname" placeholder="e.g John" required />
+          </div>
+          <button class="btn">
+            <i class="fa-solid fa-heart"></i>Calculate
+          </button>
+        </form>
+        <div class="dummy-div"></div>
+      </section>
+      <section class="result-card">
+        <h4 class="percentage">
+          Percentage : <span id="percentage-field">10%</span>
+          <span id="emoji-field"><i class="fa-solid fa-face-sad-cry"></i></span>
+        </h4>
+        <h4 class="result">
+          <span id="result-field">You can blah blah</span>
+        </h4>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
