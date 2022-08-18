@@ -1,5 +1,6 @@
 const form = document.querySelector("form");
 const submitBtn = document.querySelector(".btn");
+const spinner = document.querySelector(".spinner");
 const fnameField = document.querySelector("#fname");
 const snameField = document.querySelector("#sname");
 const percentageField = document.querySelector("#percentage-field");
@@ -9,6 +10,8 @@ const resultCard = document.querySelector(".result-card");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  submitBtn.style.display = "none";
+  spinner.style.display = "block";
   const fname = fnameField.value;
   const sname = snameField.value;
 
@@ -34,9 +37,10 @@ form.addEventListener("submit", async (e) => {
   }"></i>`;
   percentageField.style.color = ` ${data.percentage >= 50 ? "green" : "red"}`;
   emojiField.style.color = ` ${data.percentage >= 50 ? "green" : "skyblue"}`;
-
   fnameField.textContent = "";
   snameField.textContent = "";
   resultCard.style.opacity = 1;
   resultCard.style.transform = "translateY(0)";
+  submitBtn.style.display = "flex";
+  spinner.style.display = "none";
 });
