@@ -32,13 +32,8 @@ form.addEventListener("submit", async (e) => {
   emojiField.innerHTML = `<i class="fa-solid ${
     data.percentage >= 50 ? emoji.happy : emoji.sad
   }"></i>`;
-  percentageField.style.color = ` ${
-    data.percentage >= 50 ? "green" : "skyblue"
-  }`;
-
-  percentageField.style.color = ` ${
-    data.percentage >= 50 ? "green" : "skyblue"
-  }`;
+  percentageField.style.color = ` ${data.percentage >= 50 ? "green" : "red"}`;
+  emojiField.style.color = ` ${data.percentage >= 50 ? "green" : "skyblue"}`;
 
   fnameField.textContent = "";
   snameField.textContent = "";
